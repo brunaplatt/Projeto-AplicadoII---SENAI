@@ -1,0 +1,142 @@
+body{ 
+    background-color: black;
+    color: white;
+    font-family: poppinsregular;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    flex-direction: column;
+    line-height: 20px;
+    font-size: 20px;
+    font-family: poppinssemibold;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+p{
+    width: 90%;
+    font-size: 15px;
+    line-height: 30px;
+    font-family: poppinsmedium;
+    text-align: justify;
+}
+
+h2{
+    color: #09c;
+    font-size: 20px;
+    line-height: 10px;
+    font-family: poppinsmedium;
+}
+
+h3{
+    color:orange;
+    font-size: 20px;
+    line-height: 10px;
+    font-family: poppinsmedium;
+}
+
+.img-fundo{
+    clip: rect(0px,100px,200px,0px);
+    width: 580px;
+}
+
+form{
+    width: 100%;
+    font-family: poppinsmedium;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text], select {
+    width: 50%;
+    padding: 10px 15px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-family: poppinsmedium;
+    font-size: 15px;
+}
+
+input{
+    width: 50%;
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: poppinsmedium;
+    font-size: 15px;
+}
+
+input[type=submit] {
+    width: 50%;
+    background-color: #09c;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: poppinsmedium;
+    font-size: 15px;
+}
+
+input[type=submit]:hover {
+    background-color: orange;
+    font-family: poppinsmedium;
+    font-size: 15px;
+}
+  
+.esqueceu-senha a{
+    color: white;
+    font-size: 15px;
+    line-height: 10px;
+    font-family: poppinsmedium;
+    text-decoration: none;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    line-height: normal;
+    font-family: poppinsmedium;
+    font-size: 15px;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer img{
+    width: 20px;
+}
+
+.contato{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+}
+
