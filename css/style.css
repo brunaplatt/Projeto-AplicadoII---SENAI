@@ -51,6 +51,7 @@ h3{
 }
 
 .img-fundo{
+    /* text-align: right; */
     clip: rect(0px,100px,200px,0px);
     width: 580px;
 }
@@ -87,25 +88,6 @@ input{
     font-size: 15px;
 }
 
-/* input[type=submit] {
-    width: 50%;
-    background-color: #09c;
-    color: white;
-    padding: 10px 15px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    cursor: pointer;
-    font-family: poppinsmedium;
-    font-size: 15px;
-}
-
-input[type=submit]:hover {
-    background-color: orange;
-    font-family: poppinsmedium;
-    font-size: 15px;
-} */
-
 button[id=btnLogar] {
     width: 50%;
     background-color: #09c;
@@ -121,6 +103,44 @@ button[id=btnLogar] {
 
 button[id=btnLogar]:hover {
     background-color: orange;
+    font-family: poppinsmedium;
+    font-size: 15px;
+}
+
+button[id=btnCadastrar] {
+    width: 50%;
+    background-color: #09c;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: poppinsmedium;
+    font-size: 15px;
+}
+
+button[id=btnCadastrar]:hover {
+    background-color: orange;
+    font-family: poppinsmedium;
+    font-size: 15px;
+}
+
+button[id=btnLogout] {
+    width: 50%;
+    background-color: gray;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: 1px solid #cccc;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: poppinsmedium;
+    font-size: 15px;
+}
+
+button[id=btnLogout]:hover {
+    background-color: #ccc;
     font-family: poppinsmedium;
     font-size: 15px;
 }

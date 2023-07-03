@@ -9,7 +9,54 @@
 </head>
 <body>
 
-Olá
+    <header>
+        <div class="title">
+            <h1>Achados e Perdidos</h1>
+            <h1>SESI SENAI - Timbó/SC</h1>
+        </div>
+        <div class="img-logo">
+            <a href="https://sc.senai.br/">
+                <img src="img/Logo.png" alt="HTML tutorial">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <form id="">
+            <b><label>Cadastro de Item</label></b><br>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Digite o nome de quem achou o item"><br>
+            <label for="nomeItem">Item</label>
+            <input type="text" id="nomeItem" placeholder="Digite o nome do Item"><br>
+            <label for="localItem">Local</label>
+            <input type="text" id="localItem" placeholder="Digite o local onde o item foi encontrado"><br>
+            <label for="imagemItem">Imagem</label>
+            <input type="file" id="imagemItem"><br>
+
+            <button id="btnCadastrar" onclick="cadastrarItem()">Cadastrar</button>
+            <button id="btnLogout" onclick="logout()">Log out</button>
+        </form>
+    
+        <div class="img-fundo">
+            <img src="img/imgfundo.jpg" alt="tema-plataforma">
+        </div>
+    </main>
+
+    <footer>
+        <div class="dados-senai">
+            <p>SENAI Timbó/SC<br>
+            Endereço: Rua Duque de Caxias, 830 - Centro - Timbó - SC<br>
+            Telefone: (47) 3281-6453 (Segunda à Sexta-feira)<br>
+            E-mail: faleconosco@fiesc.com.br</p>
+        </div>
+        <div class="contato">
+            <a href="contato.html">Fale Conosco</a><br>
+            <img src="img/envelope.jpg" atl="faleconosco">
+        </div>
+        <b>Todos os Direitos Reservados®</b>
+    </footer>
+
+    <script src=scripts.js></script>
     
 </body>
 </html>
