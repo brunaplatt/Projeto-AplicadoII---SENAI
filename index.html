@@ -1,73 +1,81 @@
 <DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet">
-    <title>Achados e Perdidos SENAI/Timbó</title>
-</head>
-<body>
-    <header>
-        <div class="title">
-            <h1>Achados e Perdidos</h1>
-            <h1>SESI SENAI - Timbó/SC</h1>
-        </div>
-        <div class="img-logo">
-            <a href="https://sc.senai.br/">
-                <img src="img/Logo.png" alt="HTML tutorial">
-                </a>
-        </div>
-    </header>
-
-    <main>
-        <div class="text_description">
-            <aside>
-                <p>Nesta plataforma você poderá verificar se seus pertences esquecidos ou perdidos no estabelecimento do SENAI unidade Timbó,  
-                foram localizados e entregues na Secretaria.</p>
-           
-            <div class="arealogin">
-                <h2>Bem-Vindos!</h2>
-                <h3>ao Achados e Perdidos - SESI SENAI - Timbó/SC</h3>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Achados e Perdidos SENAI/Timbó</title>
+    </head>
+    
+    <body>
+        <header>
+            <div class="title">
+                <h1>Achados e Perdidos</h1>
+                <h1>SESI SENAI - Timbó/SC</h1>
             </div>
+            <div class="img-logo">
+                <a href="https://sc.senai.br/">
+                    <img src="img/Logo.png" alt="HTML tutorial">
+                    </a>
+            </div>
+        </header>
 
-            <form action="contato.html" method="post">
-                <input type="text" required data-native-error="Preencha este campo." class="form-control" placeholder="Login" name="Login" value>
-                <input type="password" required data-native-error="Preencha este campo." class="form-control" placeholder="Senha"password="Senha">
-                <br>
-                <label for="usuario">Usuário:</label>
-                    <Select id="usuario">
-                        <option value="Adm">Administrador</option>
-                        <option value="Al_Prof">Aluno/Professor</option>
-                    </Select>
-                <input type="submit" value="Entrar"><br>
-                <div class="esqueceu-senha">
-                    <a href="senha.html">Esqueceu sua Senha?</a>
-                </div>
-            </form>
-            </aside>
-        </div> 
-          
-        <div class="img-fundo">
-            <img src="img/imgfundo.jpg" alt="tema-plataforma">
-        </div>
-    </main>
-          
-</body>
+        <main>
+            <div class="text_description">
+                <aside>
+                    <div>
+                        <p>Nesta plataforma você poderá verificar se seus pertences esquecidos ou perdidos no estabelecimento do SENAI unidade Timbó,  
+                        foram localizados e entregues na Secretaria.</p>
+                    </div>
             
-<footer>
-    <div class="dados-senai">
-        <p>SENAI Timbó/SC<br>
-        Endereço: Rua Duque de Caxias, 830 - Centro - Timbó - SC<br>
-        Telefone: (47) 3281-6453 (Segunda à Sexta-feira)<br>
-        E-mail: faleconosco@fiesc.com.br</p>
-    </div>
-    <div class="contato">
-        <a href="contato.html">Fale Conosco</a><br>
-        <img src="img/envelope.jpg" atl="faleconosco">
-    </div>
-    <b>Todos os Direitos Reservados®</b>
-</footer>
+                <div class="arealogin">
+                    <h2>Bem-Vindos!</h2>
+                    <h3>ao Achados e Perdidos - SESI SENAI - Timbó/SC</h3>
+                </div>
+                    <button type="button" id="btnLogar" onclick="direcionaLoginAdmin()">Sou Administrador</button><br>
+                    <button type="button" id="btnLogar" onclick="direcionaLoginProfAluno()">Sou Professor/Aluno</button><br>
+                <!-- <form action="contato.html" method="post">
+                    <input type="text" required data-native-error="Preencha este campo." class="form-control" placeholder="Login" name="Login" id="nome">
+                    <input type="password" required data-native-error="Preencha este campo." class="form-control" placeholder="Senha" id="senha">
+                    <br> -->
+                    <!-- <label for="usuario">Usuário:</label>
+                        <Select id="usuario">
+                            <option value="Adm">Administrador</option>
+                            <option value="Al_Prof">Aluno/Professor</option>
+                        </Select> -->
+                    <!-- <input type="submit" value="Entrar"><br> -->
+                    <!-- <button type="button" id="btnLogar" onclick="loginAdmin()">Entrar</button><br>
+                    <div class="esqueceu-senha">
+                        <a href="senha.html">Esqueceu sua Senha?</a>
+                    </div>
+                </form> -->
+                </aside>
+            </div> 
+            
+            <div class="img-fundo">
+                <img src="img/imgfundo.jpg" alt="tema-plataforma">
+            </div>
+        </main>
+            
+    </body>
+
+    <footer>
+        <div class="dados-senai">
+            <p>SENAI Timbó/SC<br>
+            Endereço: Rua Duque de Caxias, 830 - Centro - Timbó - SC<br>
+            Telefone: (47) 3281-6453 (Segunda à Sexta-feira)<br>
+            E-mail: faleconosco@fiesc.com.br</p>
+        </div>
+        <div class="contato">
+            <a href="contato.html">Fale Conosco</a><br>
+            <img src="img/envelope.jpg" atl="faleconosco">
+        </div>
+        <b>Todos os Direitos Reservados®</b>
+    </footer>
+
+    <script src=scripts.js></script>
+
 </html>
 </DOCTYPE>
 

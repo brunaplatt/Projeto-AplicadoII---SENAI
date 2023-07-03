@@ -87,7 +87,7 @@ input{
     font-size: 15px;
 }
 
-input[type=submit] {
+/* input[type=submit] {
     width: 50%;
     background-color: #09c;
     color: white;
@@ -101,6 +101,25 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
+    background-color: orange;
+    font-family: poppinsmedium;
+    font-size: 15px;
+} */
+
+button[id=btnLogar] {
+    width: 50%;
+    background-color: #09c;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: poppinsmedium;
+    font-size: 15px;
+}
+
+button[id=btnLogar]:hover {
     background-color: orange;
     font-family: poppinsmedium;
     font-size: 15px;
