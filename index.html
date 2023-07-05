@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -31,19 +31,23 @@
                 <h3>ao Achados e Perdidos - SESI SENAI - Timbó/SC</h3>
             </div>
 
-            <form action="contato.html" method="post">
-                <input type="text" required data-native-error="Preencha este campo." class="form-control" placeholder="Login" name="Login" value>
-                <input type="password" required data-native-error="Preencha este campo." class="form-control" placeholder="Senha"password="Senha">
+            <form method="post">
+                <input type="text" id="nome" required data-native-error="Preencha este campo." class="form-control">
+                <input type="password" id="senha" required data-native-error="Preencha este campo." class="form-control">
                 <br>
+
                 <label for="usuario">Usuário:</label>
                     <Select id="usuario">
                         <option value="Adm">Administrador</option>
                         <option value="Al_Prof">Aluno/Professor</option>
                     </Select>
-                <input type="submit" value="Entrar"><br>
+
+                    <button type="button" id="btnLogar" onclick="login();">Entrar</button>
+
                 <div class="esqueceu-senha">
                     <a href="senha.html">Esqueceu sua Senha?</a>
                 </div>
+
             </form>
             </aside>
         </div> 
@@ -52,7 +56,8 @@
             <img src="img/imgfundo.jpg" alt="tema-plataforma">
         </div>
     </main>
-          
+
+    <script src=js/scripts.js></script>
 </body>
             
 <footer>
@@ -67,6 +72,8 @@
         <img src="img/envelope.jpg" atl="faleconosco">
     </div>
     <b>Todos os Direitos Reservados®</b>
+
+    
 </footer>
 </html>
 </DOCTYPE>
