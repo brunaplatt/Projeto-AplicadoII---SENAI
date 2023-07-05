@@ -7,6 +7,11 @@ let user = [
 	{nome: "Ana", senha: "789", acesso: "Al_Prof"},
 ]
 
+let itens = [
+	{id: "1", nome: "João", item: "Caneta", local: "Sala F21", imagem: "caneta.jpg"},
+	{id: "2", nome: "Julia", item: "Celular", local: "Sala D22", imagem: "celular.jpg"},
+]
+
 function login() {
     let getNome = document.getElementById("nome").value;
 	let getSenha = document.getElementById("senha").value;
