@@ -7,7 +7,7 @@
     <link href="css/style.css" rel="stylesheet">
     <title>Achados e Perdidos SENAI/Timbó</title>
 </head>
-<body>
+<body onload="imprimiItens()">
     <header class="menu_adm">
         <h1 class="adm">Seja Bem Vindo!</h1>
         <ul class="bar_menuadm">
@@ -15,6 +15,31 @@
             <a href="lista.html"><li>Histórico Itens</li></a>
         </ul>
     </header>
+
+    <div id="divitens">
+            <table border="1" id="tbitens">
+                    <thead>
+                    <!-- <tr align="center">
+                        <th colspan="5"><h4>Itens Cadastrados</h4></th>	
+                    </tr> -->
+                    
+                    <tr align="center">
+                        <td><b>ID</b></td>
+                        <td><b>Nome</b></td>
+                        <td><b>Nome do Item</b></td>
+                        <td><b>Local</b></td>
+                        <td><b>Imagem</b></td>
+                    </tr>
+                </thead>
+            </table>
+
+        <!-- <div style="overflow: auto; height: 215px; margin-top: 60px; width: 50;">
+            <table id="tabelaitens" border="1" style="text-align: center; max-height: 2%; overflow: scroll;">
+
+            </table>
+        </div> -->
+
+    </div>
       
     <script src="js/scripts.js"></script>
 </body>
