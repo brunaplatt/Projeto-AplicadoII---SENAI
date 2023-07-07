@@ -8,9 +8,13 @@ let user = [
 ]
 
 let itens = [
-	{id: "1", nome: "João", item: "Caneta", local: "Sala F21", imagem: "caneta.jpg"},
-	{id: "2", nome: "Julia", item: "Celular", local: "Sala D22", imagem: "celular.jpg"},
+	{id: "1", nome: "João", item: "Caneta", local: "Sala F21", imagem: "imagem"},
+	// {id: "2", nome: "Julia", item: "Celular", local: "Sala D22", imagem: "celular.jpg"},
 ]
+// localStorage.setItem("itens", JSON.stringify(itens));
+// var imagem = new image();
+// imagem.src = "C:\Users\dougf\VSCode\Projeto-AplicadoII---SENAI\img.envelope.jpg";
+// itens[0][4] = imagem;
 
 function login() {
     let getNome = document.getElementById("nome").value;
@@ -33,13 +37,13 @@ function login() {
 	}
 }
     
-    function direcionaLogin(acesso){
-        if(acesso == "Adm"){
-            window.location.href = "/adm.html";
-        } else {
-            window.location.href = "/alu_prof.html";
-        }
-    }
+function direcionaLogin(acesso){
+	if(acesso == "Adm"){
+		window.location.href = "/adm.html";
+	} else {
+		window.location.href = "/alu_prof.html";
+	}
+}
 
 	function Enviar()
 {
@@ -198,6 +202,16 @@ alert("Enviado com Sucesso!");
 			document.getElementById("localItem").value = null;
 			document.getElementById("imagemItem").value = null;
 		}
+
+		itens.push(add)
+		localStorage.setItem("itens", JSON.stringify(itens));
+		console.log(Object.values(itens))
+		alert("Item cadastrado com sucesso")
+
+		document.getElementById("nome").value = null;
+		document.getElementById("nomeItem").value = null;
+		document.getElementById("localItem").value = null;
+		document.getElementById("imagemItem").value = null;
 	}
 	
 	function imprimiItens(){
