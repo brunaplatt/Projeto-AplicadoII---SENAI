@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <title>Fale Conosco</title>
 </head>
 
-<body>
-    <form action="contato.html"method="post">
-        <label for="nome">Nome Completo</label><br>
+<body class="pgcontato">
+    <header class="menucontato">
+        <p>Preencha o formulário abaixo:</p>
+        <a href="index.html">Voltar</a><br>
+    </header>
+    <form class="formcontato" method="post">
+        <label for="nome">Nome Completo:</label><br>
         <input type="text" name="nome"><br>
         <label for="email">E-mail:</label><br>
         <input type="email" name="email"><br>
@@ -22,9 +27,9 @@
             <option value="solicitacao">Solicitação</option>
         </Select><br>
             <p>Mensagem:</p>
-            <textarea name="message" rows="30" cols="100">
+            <textarea name="message" rows="10" cols="90">
             </textarea><br>
-            <input type="submit" value="Enviar"><br>
+            <input type="submit" id="enviar" onclick="Enviar()" value="Enviar"/>
     </form>
 
     <script src=js/scripts.js></script>

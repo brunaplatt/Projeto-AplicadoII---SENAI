@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <title>Achados e Perdidos SENAI/Timbó</title>
 </head>
 <body>
-    <header>
-        <div class="title">
+    <header class="index">
+        <div class="title_index">
             <h1>Achados e Perdidos</h1>
             <h1>SESI SENAI - Timbó/SC</h1>
         </div>
@@ -20,23 +21,23 @@
         </div>
     </header>
 
-    <main>
+    <main class="home">
         <div class="text_description">
             <aside>
-                <p>Nesta plataforma você poderá verificar se seus pertences esquecidos ou perdidos no estabelecimento do SENAI unidade Timbó,  
+                <p class="pgindex">Nesta plataforma você poderá verificar se seus pertences esquecidos ou perdidos no estabelecimento do SENAI unidade Timbó,  
                 foram localizados e entregues na Secretaria.</p>
            
-            <div class="arealogin">
-                <h2>Bem-Vindos!</h2>
-                <h3>ao Achados e Perdidos - SESI SENAI - Timbó/SC</h3>
-            </div>
+                <div class="arealogin">
+                    <p>Bem-Vindos!</p>
+                    <p>ao Achados e Perdidos - SESI SENAI - Timbó/SC</p>
+                </div>
 
-            <form method="post">
-                <input type="text" id="nome" required data-native-error="Preencha este campo." class="form-control">
-                <input type="password" id="senha" required data-native-error="Preencha este campo." class="form-control">
-                <br>
+                <form class="login" method="post">
+                    <input type="text" id="nome" required data-native-error="Preencha este campo." class="form-control">
+                    <input type="password" id="senha" required data-native-error="Preencha este campo." class="form-control">
+                    <br>
 
-                <label for="usuario">Usuário:</label>
+                    <label for="usuario">Usuário:</label>
                     <Select id="usuario">
                         <option value="Adm">Administrador</option>
                         <option value="Al_Prof">Aluno/Professor</option>
@@ -47,8 +48,7 @@
                 <div class="esqueceu-senha">
                     <a href="senha.html">Esqueceu sua Senha?</a>
                 </div>
-
-            </form>
+                </form>
             </aside>
         </div> 
           
