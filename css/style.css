@@ -259,10 +259,10 @@ li #btnSalvar{
 }
 
 .divitens{
-    margin: 40px;
+    margin: 38px;
     border: 1px solid #ccc;
-    float: left;
-    width: 200px;
+    float: right;
+    width: 180px;
 }
   
 .divitens:hover {
