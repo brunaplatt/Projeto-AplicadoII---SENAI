@@ -7,15 +7,6 @@ let user = [
 	{nome: "Ana", senha: "789", acesso: "Al_Prof"},
 ]
 
-let itens = [
-	{id: "1", nome: "João", item: "Caneta", local: "Sala F21", imagem: "imagem"},
-	// {id: "2", nome: "Julia", item: "Celular", local: "Sala D22", imagem: "celular.jpg"},
-]
-// localStorage.setItem("itens", JSON.stringify(itens));
-// var imagem = new image();
-// imagem.src = "C:\Users\dougf\VSCode\Projeto-AplicadoII---SENAI\img.envelope.jpg";
-// itens[0][4] = imagem;
-
 function login() {
     let getNome = document.getElementById("nome").value;
 	let getSenha = document.getElementById("senha").value;
@@ -47,25 +38,31 @@ function direcionaLogin(acesso){
 
 	function Enviar()
 {
-alert("Enviado com Sucesso!");
+		alert("Enviado com Sucesso!");
 }
 
-	$(function(){
-		var operacao = "A"; //"A"=Adição; "E"=Edição
-		var indice_selecionado = -1; //Índice do item selecionado na lista
-		var tbItens = localStorage.getItem("tbItens");// Recupera os dados armazenados
-		tbItens = JSON.parse(tbItens); // Converte string para objeto
-		if(tbItens == null) // Caso não haja conteúdo, iniciamos um vetor vazio
-		tbItens = [];
-	});
+$(function(){
+		
+	var operacao = "A"; //"A"=Adição; "E"=Edição
+	var indice_selecionado = -1; //Índice do item selecionado na lista
+	var tbItens = localStorage.getItem("tbItens");// Recupera os dados armazenados
+	tbItens = JSON.parse(tbItens); // Converte string para objeto
+	if(tbItens == null) // Caso não haja conteúdo, iniciamos um vetor vazio
+	tbItens = [];
 
 	function Adicionar(){
+		var it = GetItem("Nome", $("#Nome").val());
+
+		if(it != null){
+			alert("Item já cadastrado.");
+			return;
+		}
 		var itens = JSON.stringify({
 			Nome       : $("#Nome").val(),
 			Descricao  : $("#Descricao").val(),
 			Local      : $("#Local").val(),
 			Data       : $("#Data").val(),
-			Imagem     : $("#Imagem").file()
+			Imagem     : $("#Imagem").val()
 	});
 		tbItens.push(itens);
 		localStorage.setItem("tbItens", JSON.stringify(tbItens));
@@ -79,7 +76,7 @@ alert("Enviado com Sucesso!");
 			Descricao  : $("#Descricao").val(),
 			Local      : $("#Local").val(),
 			Data       : $("#Data").val(),
-			Imagem     : $("#Imagem").file()
+			Imagem     : $("#Imagem").val()
 			});//Altera o item selecionado na tabela
 		localStorage.setItem("tbItens", JSON.stringify(tbItens));
 		alert("Informações editadas.")
@@ -87,19 +84,9 @@ alert("Enviado com Sucesso!");
 		return true;
 	}
 
-	function Excluir(){
-		tbItens.splice(indice_selecionado, 1);
-		localStorage.setItem("tbItens", JSON.stringify(tbItens));
-		alert("Registro excluído.");
-	}
-
 	function Listar(){
-		$("#tblLiWistar tbody").append("</tr>");
-	}
 
-	
-	function Listar(){
-    	$("#tblListar").html("lista.html");
+    	$("#tblListar").html("");
     	$("#tblListar").html(
 			"<thead>"+
 			"	<tr>"+
@@ -108,6 +95,7 @@ alert("Enviado com Sucesso!");
 			"	<th>Descrição</th>"+
 			"	<th>Local</th>"+
 			"	<th>Data</th>"+
+			"	<th>Imagem</th>"+
 			"	</tr>"+
 			"</thead>"+
 			"<tbody>"+
@@ -117,23 +105,41 @@ alert("Enviado com Sucesso!");
 
     	for(var i in tbItens){
        		var it = JSON.parse(tbItens[i]);
-        	$("#tblListar tbody").append("<tr>");
-        	$("#tblListar tbody").append("<td><img src='img/edit.png' alt='"+i+"' class = 'btnEditar'/><img src='img/delete.png' alt='"+i+"' class='btnExcluir'/></td>");
-       		$("#tblListar tbody").append("<td>"+it.Nome+"</td>");
-        	$("#tblListar tbody").append("<td>"+it.Descricao+"</td>");
-        	$("#tblListar tbody").append("<td>"+it.Local+"</td>");
-			$("#tblListar tbody").append("<td>"+it.Data+"</td>");
-        	$("#tblListar tbody").append("</tr>");
+        	$("#tblListar tbody").append("<tr>"+
+        	"<td><img src='img/edit.png' alt='"+i+"' class = 'btnEditar'/><img src='img/delete.png' alt='"+i+"' class='btnExcluir'/></td>" +
+       		"<td>"+it.Nome+"</td>" +
+        	"<td>"+it.Descricao+"</td>" +
+        	"<td>"+it.Local+"</td>" +
+			"<td>"+it.Data+"</td>" +
+			"<td>"+it.Imagem+"</td>" +
+        	"</tr>");
    		}
 	}
 
-	$("#Cadastro").on("submit",function(){
-    	if(operacao == "A")
-        	return Adicionar();
-    	else
-        	return Editar();
-	});
+	function Excluir(){
+		tbItens.splice(indice_selecionado, 1);
+		localStorage.setItem("tbItens", JSON.stringify(tbItens));
+		alert("Registro excluído.");
+	}
 
+	function GetItem(propriedade, valor){
+		var it = null;
+        for (var itens in tbItens) {
+            var i = JSON.parse(tbItens[itens]);
+            if (i[propriedade] == valor)
+                it = i;
+        }
+        return it;
+	}
+
+	Listar();
+
+	$("#Cadastro").on("submit",function(){
+		if(operacao == "A")
+			return Adicionar();
+		else
+			return Editar();		
+	});
 
 	$("#tblListar").on("click", ".btnEditar", function(){
     	operacao = "E";
@@ -153,110 +159,4 @@ alert("Enviado com Sucesso!");
     	Listar();
 	});
 
-	$("#tblListar").on("click", ".btnExcluir", function(){
-		indice_selecionado = parseInt($(this).attr("alt"));
-		Excluir();
-		Listar();
-	});
-
-	/*  <button id="btnCadastrar" onclick="cadastrarItem()">Cadastrar</button> HTML
-        <button id="btnLogout" onclick="logout()">Cancelar</button> HTML
-	
-	function constroiItem(idItem, nome, nomeItem, localItem, imagemItem) {
-		this.id = idItem;
-		this.nome = nome;
-		this.item = nomeItem;
-		this.local = localItem;
-		this.imagem = imagemItem;
-	}
-		
-	function cadastrarItem(){	
-	
-		let nome = document.getElementById("nome").value; 
-		let nomeItem = document.getElementById("nomeItem").value;
-		let localItem = document.getElementById("localItem").value;
-		let imagemItem = document.getElementById("imagemItem").value;
-		localStorage.setItem("itens", JSON.stringify(itens));
-		let itens2 = JSON.parse(localStorage.getItem("itens"));
-		let idItem = parseFloat(itens2[itens2.length - 1].id) + 1
-	
-		if (nome == "" || nomeItem == "" || localItem == "" || imagemItem == "") {
-			alert("Preencha todos os campos")
-			var flag = 1;
-		} else if(flag !==1) {
-			var add = new constroiItem(String(idItem), nome, nomeItem, localItem, imagemItem)
-	
-			if(!localStorage.itens){
-				itens = []
-			} else {
-				itens = JSON.parse(localStorage.itens)
-			}
-	
-			itens.push(add)
-			localStorage.setItem("itens", JSON.stringify(itens));
-			console.log(Object.values(itens))
-			alert("Item cadastrado com sucesso")
-	
-			document.getElementById("nome").value = null;
-			document.getElementById("nomeItem").value = null;
-			document.getElementById("localItem").value = null;
-			document.getElementById("imagemItem").value = null;
-		}
-
-		itens.push(add)
-		localStorage.setItem("itens", JSON.stringify(itens));
-		console.log(Object.values(itens))
-		alert("Item cadastrado com sucesso")
-
-		document.getElementById("nome").value = null;
-		document.getElementById("nomeItem").value = null;
-		document.getElementById("localItem").value = null;
-		document.getElementById("imagemItem").value = null;
-	}
-	
-	function imprimiItens(){
-	
-		function criaTag(elemento) {
-			return document.createElement(elemento)
-		}
-	
-		let tabela = document.getElementById("tbitens");
-		var linha = criaTag("tr");
-		// let coluna = criaTag("td");        
-	
-		let itensTabela = JSON.parse(localStorage.getItem("itens"));
-	
-		itensTabela.sort(ordenacao);
-	
-		function criaCelula (tag, text){
-			tag = criaTag(tag);
-			tag.textContent = text;
-			return tag;
-		}
-	
-		let id = "";
-		let nome = "";
-		let item = "";
-		let local = "";    
-		let imagem = "";    
-	
-		for(let j = 0; j < itensTabela.length; j++){
-	
-			var linha = criaTag("tr");
-			tabela.appendChild(linha);
-			id = criaCelula("td", itensTabela[j].id);
-			linha.appendChild(id);
-			nome = criaCelula("td", itensTabela[j].nome);
-			linha.appendChild(nome);
-			item = criaCelula("td", itensTabela[j].item);
-			linha.appendChild(item);
-			local = criaCelula("td", itensTabela[j].local);
-			linha.appendChild(local);
-			imagem = criaCelula("td", itensTabela[j].imagem);
-			linha.appendChild(imagem);
-		}
-	}
-	
-	function ordenacao(a, b, c, d, e){
-		return a.id - b.id;
-	}*/
+});

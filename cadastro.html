@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
     <title>Achados e Perdidos SENAI/Timbó</title>
 </head>
+<!-- <body onload="Listar()"> -->
 <body>
     <header class="titulo_cadastro">
         <p>Cadastro de Itens</p>
@@ -17,31 +19,33 @@
             <label>Informe os dados abaixo:</label>
             <ul class="formCadastro">
                 <li>                    
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" placeholder="Nome do Item"/>
+                    <label for="Nome">Nome:</label>
+                    <input type="text" id="Nome" placeholder="Nome do Item"/>
                 </li>
                 <li>   
-                    <label for="descricao">Item:</label>
-                    <input type="text" id="descricao" placeholder="Descreva o Item"/>
+                    <label for="Descricao">Item:</label>
+                    <input type="text" id="Descricao" placeholder="Descreva o Item"/>
                 </li>
                 <li>
-                    <label for="local">Local:</label>
-                    <input type="text" id="local" placeholder="Digite local em que foi encontrado"><br>
+                    <label for="Local">Local:</label>
+                    <input type="text" id="Local" placeholder="Digite local em que foi encontrado"><br>
                 </li>
-                    <label for="data">Data:</label>
-                    <input type="date" id="data" placeholder="Data Cadastro"></br>
-                </li>
-                <li>
-                    <label for="imagem">Imagem:</label>
-                    <input type="file" id="imgagem" name="img" accept="image/*">
+                  <label for="Data">Data:</label>
+                    <input type="date" id="Data" placeholder="Data Cadastro"></br>
                 </li>
                 <li>
+                    <label for="Imagem">Imagem:</label>
+                    <input type="file" id="Imagem" name="img" accept="image/*">
+                </li>
+                <li>
+                    <!-- <input type="submit" value="Salvar" id="btnSalvar" onclick="Adicionar()"/> -->
                     <input type="submit" value="Salvar" id="btnSalvar"/>
                 </li>
             </ul>  
-        </form>            
+        </form>
         
-    <script src="js/scripts.js"></script>
+        <table id="tblListar"></table>
+
+    <!-- <script src="js/scripts.js"></script> -->
 </body>
 </html>
-
