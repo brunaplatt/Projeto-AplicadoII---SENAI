@@ -123,7 +123,7 @@ footer img{
     align-items: center;
     background-color: #0099cc;
     box-shadow: 0px 3px 10px rgb(38, 106, 161);
-    padding: 1.5rem 6rem;
+    padding: 2rem 6rem;
 }
 
 .menucontato p{
@@ -133,7 +133,6 @@ footer img{
 .menucontato a{
     font-size: 20px;
     color: white;
-    
 }
 
 .formcontato{
@@ -150,7 +149,7 @@ footer img{
     background-color: #0099cc;
     box-shadow: 0px 3px 10px rgb(38, 106, 161);
     justify-content: space-between;
-    padding: 1.5rem 6rem;
+    padding: 2rem 6rem;
     box-sizing: border-box;
     margin: 0 auto;
 }
@@ -163,25 +162,34 @@ footer img{
     text-decoration: none;
 }
 
+.menu_adm p{
+    font-size: 20px;
+}
+
 .titulo_cadastro{
     background-color: #0099cc;
     box-shadow: 0px 3px 10px rgb(38, 106, 161);
-    padding: 1.5rem 6rem;
+    padding: 2rem 6rem;
     font-size: 15px;
+    display: inline-flexbox;
+    text-align: center;
 }
 
-.titulo_lista{
-    background-color: #0099cc;
-    box-shadow: 0px 3px 10px rgb(38, 106, 161);
-    padding: 1.5rem 6rem;
-    font-size: 15px;
+.titulo_cadastro a{
+    justify-content: space-between;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
 }
 
-.menu_aluprof{
-    background-color: #0099cc;
-    box-shadow: 0px 3px 10px rgb(38, 106, 161);
-    padding: 1.5rem 6rem;
-    font-size: 15px;
+.titulo_cadastro p{
+    font-size: 20px;
+}
+
+#Cadastro p{
+    font-size: 20px;
+    width: 50%;
+    padding-right: 20%;
 }
 
 #Cadastro{
@@ -201,7 +209,7 @@ ul label{
     font-size: 15px;
 }
 
-li #btnSalvar {
+li #btnSalvar{
     width: 5%;
     background-color: #0099cc;
     color: white;
@@ -231,11 +239,30 @@ li #btnSalvar {
     font-size: 20px;
 }
 
+.menu_aluprof{
+    background-color: #0099cc;
+    box-shadow: 0px 3px 10px rgb(38, 106, 161);
+    padding: 2rem 6rem;
+    font-size: 15px;
+    display: inline-flexbox;
+    text-align: center;
+}
+
+.menu_aluprof p{
+    font-size: 20px;
+}
+
+.menu_aluprof a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
 .divitens{
     margin: 40px;
     border: 1px solid #ccc;
     float: left;
-    width: 180px;
+    width: 200px;
 }
   
 .divitens:hover {
@@ -244,7 +271,7 @@ li #btnSalvar {
   
 .divitens img {
     width: 100%;
-    height: auto;
+    height: auto
 }
   
 .textodiv {
@@ -252,3 +279,24 @@ li #btnSalvar {
     text-align: center;
   }
    
+.titulo_lista{
+    display: inline-flexbox;
+    background-color: #0099cc;
+    box-shadow: 0px 3px 10px rgb(38, 106, 161);
+    padding: 2rem 6rem;
+    font-size: 15px;
+    text-align: center;
+}
+
+.titulo_lista p{
+    font-size: 20px;
+}
+
+.tblLista{
+    margin: 50px;
+    border: 2px solid #ccc;
+    float: left;
+    width: 1200px;
+    padding: 15px;
+    font-size: 20px;
+}

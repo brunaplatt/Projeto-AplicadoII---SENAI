@@ -10,43 +10,41 @@
     <title>Achados e Perdidos SENAI/Timbó</title>
     <link rel="icon" type="image/x-icon" href="img/lupa.ico">
 </head>
-<!-- <body onload="Listar()"> -->
+
 <body>
     <header class="titulo_cadastro">
         <p>Cadastro de Itens</p>
+        <a href="adm.html">Voltar</a>
     </header>   
  
         <form id="Cadastro">
-            <p>Informe os dados abaixo:</p>
             <ul class="formCadastro">
-                <li>                    
-                    <label for="Nome">Nome:</label>
-                    <input type="text" id="Nome" placeholder="Nome do Item"/>
-                </li>
-                <li>   
-                    <label for="Descricao">Item:</label>
-                    <input type="text" id="Descricao" placeholder="Descreva o Item"/>
-                </li>
-                <li>
-                    <label for="Local">Local:</label>
-                    <input type="text" id="Local" placeholder="Digite local em que foi encontrado"><br>
-                </li>
-                  <label for="Data">Data:</label>
-                    <input type="date" id="Data" placeholder="Data Cadastro"></br>
-                </li>
-                <li>
-                    <label for="Imagem">Imagem:</label>
-                    <input type="file" id="Imagem" name="img" accept="image/*">
-                </li>
-                <li>
-                    <!-- <input type="submit" value="Salvar" id="btnSalvar" onclick="Adicionar()"/> -->
-                    <input type="submit" value="Salvar" id="btnSalvar"/>
-                </li>
+            <li>                    
+                <label for="Nome">Nome:</label>
+                <input type="text" id="Nome" placeholder="Nome do Item"/>
+            </li>
+            <li>   
+                <label for="Descricao">Item:</label>
+                <input type="text" id="Descricao" placeholder="Descreva o Item"/>
+            </li>
+            <li>
+                <label for="Local">Local:</label>
+                <input type="text" id="Local" placeholder="Digite local em que foi encontrado"><br>
+            </li>
+                <label for="Data">Data:</label>
+                <input type="date" id="Data" placeholder="Data Cadastro"></br>
+            </li>
+            <li>
+                <label for="Imagem">Imagem:</label>
+                <input type="file" id="Imagem" name="img" accept="image/*">
+            </li>
+            <li>
+                <input type="submit" value="Salvar" id="btnSalvar"/>
+            </li>
             </ul>  
         </form>
         
         <table id="tblListar"></table>
 
-    <!-- <script src="js/scripts.js"></script> -->
 </body>
 </html>
