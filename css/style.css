@@ -292,6 +292,12 @@ li #btnSalvar{
     font-size: 20px;
 }
 
+.titulo_lista a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
 .tblLista{
     margin: 50px;
     border: 2px solid #ccc;
