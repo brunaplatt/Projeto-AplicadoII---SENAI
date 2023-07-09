@@ -230,3 +230,25 @@ li #btnSalvar {
 	background: black;
     font-size: 20px;
 }
+
+.divitens{
+    margin: 40px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+  
+.divitens:hover {
+    border: 1px solid #777;
+}
+  
+.divitens img {
+    width: 100%;
+    height: auto;
+}
+  
+.textodiv {
+    padding: 20px;
+    text-align: center;
+  }
+   

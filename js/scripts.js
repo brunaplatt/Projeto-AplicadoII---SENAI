@@ -95,7 +95,7 @@ $(function(){
 			"	<th>Descrição</th>"+
 			"	<th>Local</th>"+
 			"	<th>Data</th>"+
-			"	<th>Imagem</th>"+
+			//"	<th>Imagem</th>"+
 			"	</tr>"+
 			"</thead>"+
 			"<tbody>"+
@@ -111,7 +111,7 @@ $(function(){
         	"<td>"+it.Descricao+"</td>" +
         	"<td>"+it.Local+"</td>" +
 			"<td>"+it.Data+"</td>" +
-			"<td>"+it.Imagem+"</td>" +
+			//"<td>"+it.Imagem+"</td>" +
         	"</tr>");
    		}
 	}
