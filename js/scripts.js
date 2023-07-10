@@ -43,7 +43,7 @@ function direcionaLogin(acesso){
 
 	function Reserva()
 {
-		alert("Reserva enviada, compareça na secretaria em até 2 dias úteis.");
+		alert("Reserva enviada! Compareça na secretaria em até 2 dias úteis.");
 }
 
 $(function(){

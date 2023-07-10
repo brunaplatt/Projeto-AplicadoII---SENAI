@@ -309,4 +309,12 @@ li #btnSalvar{
     font-size: 20px;
 }
 
+.footer {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
 
