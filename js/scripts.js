@@ -41,7 +41,7 @@ function direcionaLogin(acesso){
 		alert("Enviado com Sucesso!");
 }
 
-function Reserva()
+	function Reserva()
 {
 		alert("Reserva enviada, compareça na secretaria em até 2 dias úteis.");
 }
