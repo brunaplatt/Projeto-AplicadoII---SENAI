@@ -261,8 +261,9 @@ li #btnSalvar{
 .divitens{
     margin: 38px;
     border: 1px solid #ccc;
-    float: right;
+    float: left;
     width: 180px;
+    height: 450px;
 }
   
 .divitens:hover {
